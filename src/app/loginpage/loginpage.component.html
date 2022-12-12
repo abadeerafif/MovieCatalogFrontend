@@ -1,0 +1,22 @@
+<div class="Loginform">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your email</mat-label>
+      <input [(ngModel)]="email" matInput placeholder="pat@example.com" [formControl]="emailvalidator" required>
+      <mat-error *ngIf="emailvalidator.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <br/>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input [(ngModel)]="password" matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hidepassword()" >
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <br/>
+      
+      <button *ngIf="signup==false;" mat-raised-button color="primary" (click)="submit()">Login</button>
+      <button *ngIf="signup==true;" mat-raised-button color="primary" (click)="submit()">Sign up</button>
+</div>
+<br>
+<button *ngIf="signup==false;" id="signupbtn" mat-raised-button color="primary" (click)="  signupfn()">don't have an account?</button>
+<button *ngIf="signup==true;" id="signupbtn" mat-raised-button color="primary" (click)="  signupfn()">Have an accout?</button>

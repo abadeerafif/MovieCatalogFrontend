@@ -1,0 +1,24 @@
+.Loginform{
+    border: 1px solid;
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+  
+  display:flex;
+   justify-content: center;
+   align-items: center;
+}
+mat-form-field{
+   position: relative;
+   width: 40%;
+   padding: 2%;
+   
+   
+
+}
+#signupbtn
+{
+   position: relative;
+   left: 44%;
+
+}

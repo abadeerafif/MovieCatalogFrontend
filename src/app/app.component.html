@@ -1,0 +1,10 @@
+
+<mat-toolbar>
+    <span>Movie application</span>
+    
+    <button   *ngIf="isloogedout==false;" class="toolbaricon" (click)="logout()">
+        <mat-icon  aria-hidden="false" >logout</mat-icon>
+      </button>
+</mat-toolbar>
+
+<router-outlet (loginevent)="loginev($event)"></router-outlet>
