@@ -18,5 +18,6 @@
       <button *ngIf="signup==true;" mat-raised-button color="primary" (click)="submit()">Sign up</button>
 </div>
 <br>
+<!-- TODO use variable to change message instead of duplicating lines -->
 <button *ngIf="signup==false;" id="signupbtn" mat-raised-button color="primary" (click)="  signupfn()">don't have an account?</button>
 <button *ngIf="signup==true;" id="signupbtn" mat-raised-button color="primary" (click)="  signupfn()">Have an accout?</button>

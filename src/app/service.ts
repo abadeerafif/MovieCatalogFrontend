@@ -9,6 +9,8 @@ export class service {
 
   getmovies()
   {
+    // TODO use service for api calls instead of calling apis in components
+    // TODO try using angular's HttpClient
     fetch("http://localhost:8080/Movies",{"method":"GET","headers":{}}).then(response=>{console.log(response);
     })
   }
