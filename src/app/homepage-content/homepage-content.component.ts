@@ -21,6 +21,7 @@ export class HomepageContentComponent {
   
   getmovies()
   {
+    // TODO use formatter to break down long lines
     fetch("http://localhost:8080/getMovies",{method:"POST",headers: {"Content-Type": "application/json"},body:localStorage.getItem('auth'),redirect: 'follow'}).then(response=>{response.json().then(json=>{
       console.log(json);
       if(json.error!=undefined)
